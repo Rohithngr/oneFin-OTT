@@ -1,0 +1,29 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+
+h1,h2,button,label,small{
+    font-family: "monts"!important;
+    font-size: 10px;
+  }
+  ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    font-family: "monts"!important;
+    color: rgb(186, 178, 178);
+    font-size: 12px;
+  }
+  input[type="text"]
+  {
+    font-family: "monts"!important;
+  }
+  p{
+    font-family: "monts"!important;
+  }
+  /* font */
+  @font-face {
+    font-family: "monts";
+    src: url(assets/fonts/Montserrat-Medium.ttf) format("truetype");
+  }
+  /* font */
+  .modal-backdrop {
+    z-index: 0!important;
+  }

@@ -1,0 +1,50 @@
+<div class="background">
+  <form [formGroup]='loginForm' (ngSubmit)='login()'>
+    <div class="login-content">
+        <div class="row">
+            <div class="col-12">
+                <h1>Log In</h1>
+            </div>
+        </div>
+        <div class="row" *ngIf="errorAlert">
+            <div class="col-12">
+                <div class="alert alert-danger" role="alert">
+                   <p> Invalid Login Credentials!</p>
+                  </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <label for="">Username</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+               <input type="text" placeholder="Username"  formControlName='username'>
+               <small *ngIf="error &&  f['username'].invalid" class="p-error">Username is required.</small>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <label for="">Password</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+               <input type="password" placeholder="Password"  formControlName='password'>
+               <small *ngIf="error &&  f['password'].invalid" class="p-error">Password is required.</small>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <button type="submit" [disabled]="isLoading">
+                    <div *ngIf="!isLoading">Log In</div>
+                    <div  *ngIf="isLoading" class="spinner-border" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                      </div>
+                </button>
+            </div>
+        </div>
+    </div>
+  </form>
+</div>

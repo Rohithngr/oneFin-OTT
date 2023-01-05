@@ -1,0 +1,78 @@
+<div class="container mt-5">
+    <div class="row" *ngIf="!error">
+        <div class="row">
+            <div class="col-3">
+                <input type="text" class="form-control" placeholder="Search" aria-label="Username" aria-describedby="basic-addon1">
+            </div>
+        </div>
+        <div *ngFor="let item of movieDetails;let i = index" class="col-12 col-md-4 col-lg-4">
+            <div  class="card justify-content-end mt-2" (click)="movieDetail(i)" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <div class="card-body" >
+                    <div class="row">
+                        <div class="col-12 text-end">
+                            <h2 class="card-title">{{item.title}}</h2>
+                        </div>
+                     </div>
+                 <div class="row">
+                    <div class="col-4 ">
+                        <img class="movie-image" src='https://ui-avatars.com/api/?name={{item.title}}' alt="">
+                    </div>
+                    <div class="col-8">
+                        <p>{{item.genres}}</p>
+                    </div>
+                 </div>
+                 <div class="row">
+                    <div class="col-12 text-start">
+                        <p>{{item.description | slice: sliceOptions.start:sliceOptions.end}}....</p>
+                    </div>
+                   
+                 </div>
+                </div>
+               
+              </div>
+             
+        </div>
+        
+    </div>
+    <div class="background" *ngIf="error">
+          <div class="login-content">
+                <div class="row">
+                    <div class="col-12">
+                        <button (click)="ngOnInit()" class="btn">Refresh</button>
+                    </div>
+                </div>
+
+          </div>
+      </div>
+      
+</div>
+<!-- Button trigger modal -->
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel"><b>{{this.details['title']}}</b></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="row">
+                <div class="col-6 align-self-center">
+                    <img class="detail-image" src='https://ui-avatars.com/api/?name={{title}}'  alt="">
+                </div>
+                <div class="col-6">
+                    <p>{{this.details['description']}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <div class="row">
+                <div class="col-12 ">
+                    <p><b>{{ this.details['genres']}}</b></p>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,65 @@
+h1,h2{
+    font-family: "monts";
+    margin: 0px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #000000;
+  }
+
+  .card{
+    background-color: inherit;
+   height: 220px;
+    border-top: solid 2px #155672;
+    border-left: solid 2px #155672;
+    border-bottom: 8px double #155672;
+    border-right: 8px double #155672;
+    margin-bottom: 5px;
+    border-radius: 12px;
+  }
+  .card:hover{
+    transform: scale(1.01);
+    cursor: pointer;
+  }
+  .card-btn{
+    border: solid 0.5px gray;
+    border-radius: 8px;
+    padding: 5px;
+    background-color: inherit;
+    font-family: "monts";
+    width: 100%;
+  }
+  .card-body{
+    text-align: end;
+  }
+  .btn{
+    background-color: #155672;
+    color: #AAE5FF ;
+    padding: 8px;
+  }
+  .movie-image{
+    border-radius: 50%;
+    border: none;
+    padding: 6px;
+    height: 65px;
+    margin: 10px;
+  }
+  p{
+    font-size: 12px;
+  }
+  .modal-dialog-scrollable .modal-content{
+    height: 350px;
+  }
+  .detail-image{
+    width: 100%;
+  }
+
+  .login-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: inherit;
+    width: 300px;
+    border-radius: 8px;
+    padding: 15px;
+  }
