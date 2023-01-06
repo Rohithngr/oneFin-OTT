@@ -12,17 +12,13 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatTableModule} from '@angular/material/table';
 import { HomeComponent } from './home/home.component';
 import {MatDialogModule} from '@angular/material/dialog';
-import { MovieDetailComponent } from './movie-detail/movie-detail.component';
 import { FormsModule } from '@angular/forms';
-import { SearchPipe } from '../pipe/search.pipe';
 
 
 @NgModule({
   declarations: [
     ProjectComponent,
     HomeComponent,
-    MovieDetailComponent,
-    // SearchPipe
   ],
   imports: [
     CommonModule,
