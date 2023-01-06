@@ -44,6 +44,9 @@ export class ProjectComponent  {
   getScreenWidth(): Observable<number> {
     return this.screenWidth$.asObservable();
   }
-
+  logout(){
+    localStorage.clear();
+    this.router.navigate(['login'])
+  }
 
 }

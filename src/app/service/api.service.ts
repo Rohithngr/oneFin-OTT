@@ -19,7 +19,7 @@ export class ApiService {
   //login
   //Movies
   getMovies(){
-    return this.http.get(`${this.baseurl}maya/movies/?page=899`)
+    return this.http.get(`${this.baseurl}maya/movies/`)
   }
   //Movies
 }
